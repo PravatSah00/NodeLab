@@ -14,18 +14,24 @@ import LogHandler from './LogHandler';
 /**
  * Function for install package through npm
  */
-export default function installPackage({ packageName }: { packageName: string }) {
+export default function executeCommand({ command }: { command: string }) {
     try {
         
         // Execute install process
-        execSync(`npm install ${packageName}`, { stdio: 'inherit' });
+        const stdOut = execSync( command );
         
-        return true;
+        return {
+            success: true,
+            output: stdOut.toString(),
+        }
 
     } catch (error: any) {
-        
+
         LogHandler.log({ log: error.stack });
-        
-        return false;
+
+        return {
+            success: false,
+            output: error.message,
+        }        
     }
 }
