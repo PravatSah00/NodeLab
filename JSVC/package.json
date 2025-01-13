@@ -1,0 +1,19 @@
+{
+  "name": "jsvm",
+  "version": "1.0.0",
+  "description": "Javascript virtual matchine",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node dist/index.js"
+  },
+  "author": "pravats459@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^22.10.5"
+  },
+  "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0"
+  }
+}
