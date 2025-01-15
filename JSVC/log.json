@@ -1,5 +1,9 @@
 [
   {
+    "log": "Watching for changes in folder: C:\\Users\\prava\\OneDrive\\Desktop\\Project\\JSnotebook\\JSVC\\content",
+    "time": 1736939018380
+  },
+  {
     "log": "Error: Command failed: npm install expressoooooooooooooooooooo\n(node:8364) ExperimentalWarning: CommonJS module C:\\Users\\prava\\AppData\\Roaming\\npm\\node_modules\\npm\\node_modules\\debug\\src\\node.js is loading ES Module C:\\Users\\prava\\AppData\\Roaming\\npm\\node_modules\\npm\\node_modules\\supports-color\\index.js using require().\nSupport for loading ES Module in require() is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nnpm error code E404\nnpm error 404 Not Found - GET https://registry.npmjs.org/expressoooooooooooooooooooo - Not found\nnpm error 404\nnpm error 404  'expressoooooooooooooooooooo@*' is not in this registry.\nnpm error 404\nnpm error 404 Note that you can also install from a\nnpm error 404 tarball, folder, http url, or git url.\nnpm error A complete log of this run can be found in: C:\\Users\\prava\\AppData\\Local\\npm-cache\\_logs\\2025-01-13T14_45_55_105Z-debug-0.log\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execSync (node:child_process:954:15)\n    at executeCommand (C:\\Users\\prava\\OneDrive\\Desktop\\Project\\JSnotebook\\JSVC\\dist\\lib\\cmdExecuter.js:23:53)\n    at Object.<anonymous> (C:\\Users\\prava\\OneDrive\\Desktop\\Project\\JSnotebook\\JSVC\\dist\\index.js:7:42)\n    at Module._compile (node:internal/modules/cjs/loader:1546:14)\n    at Object..js (node:internal/modules/cjs/loader:1698:10)\n    at Module.load (node:internal/modules/cjs/loader:1303:32)\n    at Function._load (node:internal/modules/cjs/loader:1117:12)",
     "time": 1736779557147
   }
