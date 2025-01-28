@@ -24,9 +24,10 @@ import { uploadFileController } from "./controller";
 import { removeFileController } from "./controller";
 import { renameFileController } from "./controller";
 import { getFileController } from "./controller";
+import { getLogController } from "./controller";
 
 // Create express app
-const app = express();
+export const app = express();
 
 app.listen(69, () => {
     console.log("Server runing on http://localhost:69");
@@ -100,6 +101,11 @@ app.post('/rename-file', renameFileController);
  * Router for get file
  */
 app.get('/get-file', getFileController);
+
+/**
+ * Router for get log
+ */
+app.get('/logs', getLogController);
 
 ////////////////////////////////POST MIDDLEWARES///////////////////////////////
 

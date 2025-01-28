@@ -45,6 +45,14 @@ class LogHandler {
     }
 
     /**
+     * Get all logs
+     * @returns 
+     */
+    public getLogs(): Array<LogBlock> {
+        return this.load();
+    }
+
+    /**
      * Create a new logBlock
      * @param log log string 
      * @returns a new logBlock
