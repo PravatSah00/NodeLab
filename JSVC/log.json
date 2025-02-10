@@ -1,5 +1,213 @@
 [
   {
+    "log": "Directory removed: temp4",
+    "time": 1739213781670
+  },
+  {
+    "log": "Directory removed: temp3",
+    "time": 1739213781651
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739213766176
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739213718456
+  },
+  {
+    "log": "User[bbbqo5fco_15WX9ZAAAB] disconnected from socket server",
+    "time": 1739213491472
+  },
+  {
+    "log": "File removed: temp1/pravat.txt",
+    "time": 1739213465491
+  },
+  {
+    "log": "Directory removed: temp1",
+    "time": 1739213465392
+  },
+  {
+    "log": "File created: temp1/pravat.txt",
+    "time": 1739213442151
+  },
+  {
+    "log": "User[bbbqo5fco_15WX9ZAAAB] connection via socket successfull",
+    "time": 1739213404355
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739213402921
+  },
+  {
+    "log": "User[dbeuJNhAUPpaTOYEAAAB] connection via socket successfull",
+    "time": 1739213396967
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739213395015
+  },
+  {
+    "log": "Directory removed: temp",
+    "time": 1739212997148
+  },
+  {
+    "log": "Directory removed: temp/temp22",
+    "time": 1739212997129
+  },
+  {
+    "log": "Directory removed: temp/temp11",
+    "time": 1739212997128
+  },
+  {
+    "log": "User[JNOmHOV0tiUkP_PDAAAB] connection via socket successfull",
+    "time": 1739212962813
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739212962083
+  },
+  {
+    "log": "Directory added: temp5/temp69",
+    "time": 1739212822734
+  },
+  {
+    "log": "Directory added: temp5",
+    "time": 1739212822732
+  },
+  {
+    "log": "User[PYZaKZh8EjxAA9PEAAAH] connection via socket successfull",
+    "time": 1739212808883
+  },
+  {
+    "log": "User[JSa92O6yer7svAJTAAAF] disconnected from socket server",
+    "time": 1739212804023
+  },
+  {
+    "log": "Directory added: temp5/temp5",
+    "time": 1739212736272
+  },
+  {
+    "log": "Directory added: temp5",
+    "time": 1739212736270
+  },
+  {
+    "log": "User[JSa92O6yer7svAJTAAAF] connection via socket successfull",
+    "time": 1739212723341
+  },
+  {
+    "log": "User[DdTfFBcikRekUWSNAAAD] disconnected from socket server",
+    "time": 1739212718859
+  },
+  {
+    "log": "Directory added: temp1/temp11",
+    "time": 1739212644226
+  },
+  {
+    "log": "Directory added: temp1/temp11",
+    "time": 1739212599159
+  },
+  {
+    "log": "Directory added: temp1",
+    "time": 1739212599157
+  },
+  {
+    "log": "Directory added: temp1/temp/temp",
+    "time": 1739212479337
+  },
+  {
+    "log": "Directory added: temp1/temp",
+    "time": 1739212479335
+  },
+  {
+    "log": "Directory added: temp/temp22",
+    "time": 1739212417014
+  },
+  {
+    "log": "User[DdTfFBcikRekUWSNAAAD] connection via socket successfull",
+    "time": 1739212387758
+  },
+  {
+    "log": "User[DeOPiaQ1btEljCGGAAAB] disconnected from socket server",
+    "time": 1739212381203
+  },
+  {
+    "log": "User[DeOPiaQ1btEljCGGAAAB] connection via socket successfull",
+    "time": 1739212346433
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739212344565
+  },
+  {
+    "log": "User[uWUZCr9WCDfdCksIAAAB] connection via socket successfull",
+    "time": 1739211818264
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739211816776
+  },
+  {
+    "log": "User[jcwgZfGCGVzdHh48AAAB] connection via socket successfull",
+    "time": 1739196328673
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739196327262
+  },
+  {
+    "log": "User[KDNKGUtzviB7jZ7wAAAB] connection via socket successfull",
+    "time": 1739196300629
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739196299390
+  },
+  {
+    "log": "User[a2cRowI21dTcGajzAAAB] connection via socket successfull",
+    "time": 1739196218919
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739196217722
+  },
+  {
+    "log": "User[Wxfiu4P7ynjxtMwgAAAB] connection via socket successfull",
+    "time": 1739196126598
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739196121723
+  },
+  {
+    "log": "User[-L67lxSDCvlQ45B8AAAB] connection via socket successfull",
+    "time": 1739194888021
+  },
+  {
+    "log": "Watching for changes in folder: /home/pravat/Desktop/Project/JSnotebook/JSVC/content",
+    "time": 1739194886931
+  },
+  {
+    "log": "User[-rqu-AGBOU_0ebifAAAB] connection via socket successfull",
+    "time": 1739194691542
+  },
+  {
+    "log": "User[z7xO61bw-xYLAieFAAAB] connection via socket successfull",
+    "time": 1739194393972
+  },
+  {
+    "log": "User[tgl_vGEx8tlMBPi1AAAB] connection via socket successfull",
+    "time": 1739194266820
+  },
+  {
+    "log": "User[6zNwoRB-J13fZF-VAAAB] disconnected from socket server",
+    "time": 1739194160997
+  },
+  {
+    "log": "User[6zNwoRB-J13fZF-VAAAB] connection via socket successfull",
+    "time": 1739194116675
+  },
+  {
     "log": "send file C:\\Users\\prava\\OneDrive\\Desktop\\Project\\JSnotebook\\JSVC\\content\\about.txt ",
     "time": 1738092395874
   },

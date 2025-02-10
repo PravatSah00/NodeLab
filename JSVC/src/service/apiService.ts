@@ -7,6 +7,7 @@
  * -------------------------------------------------------------------------------------------------------------
  */
 
+import http from "http";
 import express from "express";
 import fileUpload from "express-fileupload";
 import cors from "cors";
@@ -27,11 +28,11 @@ import { getFileController } from "./controller";
 import { getLogController } from "./controller";
 
 // Create express app
-export const app = express();
+const app = express();
 
-app.listen(69, () => {
-    console.log("Server runing on http://localhost:69");
-});
+// Create an HTTP server from the Express app
+export const httpServer = http.createServer( app );
+
 
 /////////////////////////////////PRE MIDDLEWARES//////////////////////////////
 
