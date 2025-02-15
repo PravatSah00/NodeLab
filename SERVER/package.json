@@ -1,0 +1,18 @@
+{
+  "name": "nodelab-server",
+  "version": "1.0.0",
+  "description": "nodelab server",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts"
+  },
+  "author": "pravats459@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "ts-node": "^10.9.2"
+  },
+  "type": "commonjs"
+}
