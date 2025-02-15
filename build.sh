@@ -8,7 +8,7 @@ set -e
 
 
 # STEP1: build JSVC typescript src
-    echo "🚀 Building TypeScript project..."
+    echo "🔨 Building TypeScript project..."
 
     # Navigate to jsvm folder
     cd ./JSVC
@@ -26,7 +26,7 @@ set -e
 
 
 
-# STEP1: create JSVC docker image
+# STEP2: create JSVC docker image
     echo "🔨 Building JSVC image..."
     
     # Define image names
@@ -34,6 +34,20 @@ set -e
 
     # Build each image
     docker build -t $JSVC_IMAGE ./JSVC
+
+    echo "✅ Image building process complete"
+
+
+
+
+# STEP3: create JSVC docker network
+    echo "🔨 Building JSVC network..."
+    
+    # Define network name
+    JSVC_NETWORK="jsvc-network"
+
+    # Build ICC disable network
+    docker network create --driver bridge --opt com.docker.network.bridge.enable_icc=false $JSVC_NETWORK
 
     echo "✅ Image building process complete"
 

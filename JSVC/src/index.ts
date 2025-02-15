@@ -1,3 +1,13 @@
+/**
+ * -------------------------------------------------------------------------------------------------------------
+ * NOTE: Entrypoint of JSVC engine
+ * 
+ * AUTHOR: pravats459@gmail.com
+ * VERSION: 1.0.0
+ * -------------------------------------------------------------------------------------------------------------
+ */
+
+
 import { httpServer } from './service/apiService';
 import './service/socketService';
 import './service/fileMonitor';
