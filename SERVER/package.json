@@ -10,9 +10,13 @@
   },
   "author": "pravats459@gmail.com",
   "license": "ISC",
+  "type": "commonjs",
   "devDependencies": {
     "@types/node": "^22.10.5",
     "ts-node": "^10.9.2"
   },
-  "type": "commonjs"
+  "dependencies": {
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
 }
