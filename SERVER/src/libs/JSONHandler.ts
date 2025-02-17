@@ -52,7 +52,7 @@ class JSONHandler {
      * @param key Key to search
      * @returns Value associated with the key, or undefined if not found
      */
-    get<T>(key: string): T | undefined {
+    get<T>(key: string, defaultValue: any = undefined ): T | undefined {
         
         // Split key
         const keys = key.split('.');
@@ -62,7 +62,7 @@ class JSONHandler {
             
             // Check key exist or not
             if ( current[key] === undefined ) {
-                return undefined;
+                return defaultValue;
             }
 
             current = current[key];

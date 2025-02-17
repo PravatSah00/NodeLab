@@ -9,7 +9,7 @@
 
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
-import config from "./config";
+import config from "../utils/config";
 
 /**
  * Create log formate
@@ -28,7 +28,6 @@ const logFormat = winston.format.combine(
  */
 const transport: DailyRotateFile = new DailyRotateFile({
     filename:      `${config.get('logConfig.logFolder')}${config.get( 'logConfig.logFile' )}`,
-    level:         config.get( 'logConfig.logLevel' ),
     datePattern:   'YYYY-MM-DD-HH',
     zippedArchive: true,
     maxSize:       '20m',
