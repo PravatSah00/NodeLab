@@ -30,8 +30,8 @@ export const connectDB = async () => {
 
         logger.info( 'Databse connected successfully' );
     
-    } catch (error) {
-        logger.error( `Database Connection Error: ${error}` );
+    } catch (error: any) {
+        logger.error( `Database Connection Error: ${error.stack}` );
         process.exit(1);
     }
 };
