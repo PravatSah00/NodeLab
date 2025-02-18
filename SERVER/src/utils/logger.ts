@@ -9,7 +9,7 @@
 
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
-import config from "../utils/config";
+import config from "@utils/config";
 
 /**
  * Create log formate

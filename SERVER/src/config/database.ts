@@ -8,8 +8,8 @@
  */
 
 import mongoose from "mongoose";
-import config from "../utils/config";
-import logger from "../utils/logger";
+import config from "@utils/config";
+import logger from "@utils/logger";
 
 
 export const connectDB = async () => {

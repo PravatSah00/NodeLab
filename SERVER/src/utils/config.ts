@@ -8,7 +8,7 @@
  */
 
 import path from 'path';
-import JSONHandler from '../libs/JSONHandler';
+import JSONHandler from '@libs/JSONHandler';
 
 /**
  * CONFIG file path
