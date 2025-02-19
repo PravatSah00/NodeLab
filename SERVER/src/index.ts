@@ -8,12 +8,12 @@ import "./boot";
 // console.log(`Total RAM: ${(totalRAM / 1024 / 1024).toFixed(2)} MB`);
 // console.log(`Free RAM: ${(freeRAM / 1024 / 1024).toFixed(2)} MB`);
 
-import { createContainer } from "@core/container/utils";
+import { createDockerContainer } from "@core/container/docker";
 
 const start = async () => {
-    const info = await createContainer( 'container1' );
+    const info = await createDockerContainer( 'container1' );
 
     console.log(info);
 }
 
-start();
+// start();

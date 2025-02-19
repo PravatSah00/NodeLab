@@ -1,21 +1,19 @@
 /**
  * -------------------------------------------------------------------------------------------------------------
- * NOTE: Provide container related interface
+ * NOTE: Cashe the active containers
  * 
  * AUTHOR: pravats459@gmail.com
  * VERSION: 1.0.0
  * -------------------------------------------------------------------------------------------------------------
  */
 
+import CacheHandler from "@libs/cacheHandler";
+import { ContainerInfo } from "./interface";
+
 /**
- * Interface of container info
+ * Cache container actively in memory for performace boost
  */
-export interface ContainerInfo {
-    id:         string,
-    name:       string,
-    status:     string,
-    created:    string,
-    IPAddress:  string,
-    startedAt:  string,
-    finishedAt: string,
-}
+class ContainerCache extends CacheHandler<ContainerInfo> {}
+
+
+export default new ContainerCache();

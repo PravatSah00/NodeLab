@@ -17,7 +17,7 @@ import { ContainerInfo } from './interface';
 /**
  * Check docker is running or not
  */
-export async function checkConnection() {
+export async function checkDockerConnection() {
     // Check docker is running or not
     try {
         await docker.ping();
@@ -30,18 +30,18 @@ export async function checkConnection() {
 /**
  * Monitor the containers status
  */
-export async function monitorContainers() {
+export async function monitorDockerContainers() {
     
 }
 
 /**
  * Span a new container
- * @param name 
+ * @param name unique name of the container
  */
-export async function createContainer( name: string ): Promise<ContainerInfo> {
+export async function createDockerContainer( name: string ): Promise<ContainerInfo> {
 
     // Check docker is running or not
-    checkConnection();
+    checkDockerConnection();
 
     // Get the image name and network name
     const IMAGE   = config.get('dockerConfig.image') as string;
@@ -78,16 +78,14 @@ export async function createContainer( name: string ): Promise<ContainerInfo> {
         // Return info of newly created container
         const info = await container.inspect();
 
-        console.log(info.NetworkSettings);
-
         return {
-            id: info.Id,
-            name: info.Name,
-            created: info.Created,
-            status: info.State.Status,
-            startedAt: info.State.StartedAt,
+            id:         info.Id,
+            name:       info.Name,
+            created:    info.Created,
+            status:     info.State.Status,
+            startedAt:  info.State.StartedAt,
             finishedAt: info.State.FinishedAt,
-            privateIP: ''
+            privateIP:  info.NetworkSettings.Networks[NETWORK].IPAddress,
         }
   
     } catch ( error: any ) {
@@ -99,6 +97,6 @@ export async function createContainer( name: string ): Promise<ContainerInfo> {
 /**
  * Cleanup container before create a new container if needed
  */
-async function preCleanupContainer() {
+export async function preCleanupDockerContainer() {
     
 }
