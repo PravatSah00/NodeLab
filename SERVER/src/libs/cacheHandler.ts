@@ -41,7 +41,7 @@ class CacheHandler<T> {
     /**
      * Get a entry from store
      */
-    public get( key: string, defaultValue: T | undefined ) {
+    public get( key: string, defaultValue: T | undefined  = undefined) {
 
         const data = this.store.get( key );
     

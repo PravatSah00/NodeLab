@@ -80,12 +80,12 @@ export async function createDockerContainer( name: string ): Promise<ContainerIn
 
         return {
             id:         info.Id,
-            name:       info.Name,
+            name:       name,
             created:    info.Created,
             status:     info.State.Status,
             startedAt:  info.State.StartedAt,
             finishedAt: info.State.FinishedAt,
-            privateIP:  info.NetworkSettings.Networks[NETWORK].IPAddress,
+            IPAddress:  info.NetworkSettings.Networks[NETWORK].IPAddress,
         }
   
     } catch ( error: any ) {
@@ -94,9 +94,76 @@ export async function createDockerContainer( name: string ): Promise<ContainerIn
     }
 }
 
+export async function removeDockerContainer( containerId: string ) {
+    try {
+
+        // Get the docker containre
+        const container = getDockerContainer( containerId );
+
+        // Check container exist or not
+        if ( ! container ) return false;
+
+        // Stop docker container
+        await stopDockerContainer( containerId );
+
+        // Delete docker container
+        await deleteDockerContainer( containerId );
+
+        return true;
+
+    } catch ( error: any ) {
+        logger.error( `Unable to remove container[${containerId}]: ${error.stack}` );
+        return false;
+    }
+}
+
 /**
- * Cleanup container before create a new container if needed
+ * Check docker container exist or not
+ * @param containerId
+ * @returns 
  */
-export async function preCleanupDockerContainer() {
-    
+export async function getDockerContainer( containerId: string ) {
+    try {
+        // Get the container info
+        const container = docker.getContainer( containerId );
+        return await container.inspect();
+
+    } catch ( error: any ) {
+        logger.error( `Unable to access container[${containerId}]: ${error.stack}` );
+        return null;
+    }
+}
+
+/**
+ * Stop a running docker container
+ * @param containerId 
+ */
+export async function stopDockerContainer( containerId: string ): Promise<boolean> {
+    try {
+        const container = docker.getContainer( containerId );
+        await container.stop();
+
+        return true;
+
+    } catch ( error: any ) {
+        logger.error( `Unable to stop container[${containerId}]: ${error.stack}` );
+        return false;
+    }
+}
+
+/**
+ * Delete a running docker container
+ * @param containerId 
+ */
+export async function deleteDockerContainer( containerId: string ): Promise<boolean> {
+    try {
+        const container = docker.getContainer( containerId );
+        await container.remove();
+
+        return true;
+
+    } catch ( error: any ) {
+        logger.error( `Unable to delete container[${containerId}]: ${error.stack}` );
+        return false;
+    }
 }

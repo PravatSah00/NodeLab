@@ -8,12 +8,17 @@ import "./boot";
 // console.log(`Total RAM: ${(totalRAM / 1024 / 1024).toFixed(2)} MB`);
 // console.log(`Free RAM: ${(freeRAM / 1024 / 1024).toFixed(2)} MB`);
 
-import { createDockerContainer } from "@core/container/docker";
+
+import { createContainer } from "@core/container/service";
+import { getDockerContainer } from "@core/container/docker";
 
 const start = async () => {
-    const info = await createDockerContainer( 'container1' );
+    // await createContainer( 1 );
+    // await createContainer( 2 );
+    // await createContainer( 3 );
 
-    console.log(info);
+    const info = getDockerContainer( 'container-1' );
+    console.log( info );
 }
 
 // start();

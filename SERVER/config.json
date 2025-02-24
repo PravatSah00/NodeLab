@@ -1,6 +1,6 @@
 {
   "dbConfig": {
-    "mongoUri": "mongodb+srv://pravats459:<db_password>@cluster0.gb2wt.mongodb.net/<db_name>/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongoUri": "mongodb+srv://pravats459:<db_password>@cluster0.gb2wt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     "dbName": "nodelab",
     "dbPass": "2yKHMHQdCivQWcT7"
   },

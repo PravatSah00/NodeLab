@@ -20,11 +20,11 @@ export const connectDB = async () => {
     let dbPass   = config.get( 'dbConfig.dbPass' ) as string;
 
     mongoUri = mongoUri.replace( '<db_password>', dbPass );
-    mongoUri = mongoUri.replace( '<db_name>', dbName );
 
     try {
         // Connect to mongodb server
         await mongoose.connect( mongoUri, {
+            dbName: dbName,
             serverSelectionTimeoutMS: 5000,
         });
 

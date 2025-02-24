@@ -13,26 +13,28 @@ import mongoose, { Schema, Document } from "mongoose";
  * Define container interface
  */
 export interface IContainer extends Document {
-    cid:        string,
-    name:       string,
-    status:     string,
-    IPAddress:  string
-    createdAt:  number,
-    startedAt:  number,
-    finishedAt: number,
+    userId:      number,
+    containerId: string,
+    name:        string,
+    status:      string,
+    IPAddress:   string
+    createdAt:   string,
+    startedAt:   string,
+    finishedAt:  string,
 }
 
 /**
  * Define container schema
  */
 const ContainerSchema = new Schema<IContainer>({
-    cid:        { type: String, required: true },
-    name:       { type: String, required: true },
-    status:     { type: String, required: true },
-    IPAddress:  { type: String, required: true },
-    createdAt:  { type: Number, required: true },
-    startedAt:  { type: Number, required: true },
-    finishedAt: { type: Number, required: true },
+    userId:      { type: Number, required: true, unique: true },
+    containerId: { type: String, required: true, unique: true },
+    name:        { type: String, required: true, unique: true },
+    status:      { type: String, required: true },
+    IPAddress:   { type: String, required: true, unique: true },
+    createdAt:   { type: String, required: true },
+    startedAt:   { type: String, required: true },
+    finishedAt:  { type: String, required: true },
 });
 
 /**
