@@ -1,7 +1,8 @@
 package main
 
-import "log"
+import "nodelab/internal/app"
 
 func main() {
-	log.Println("hello world")
+	// Create the app and run it
+	app.New().Run()
 }
