@@ -1,0 +1,11 @@
+# Ignore the build output directory
+/dist/
+*/dist/
+
+# Ignore node_modules
+/node_modules/
+*/node_modules/
+
+#ignore log directory
+/logs/
+*/logs/
