@@ -1,11 +1,7 @@
 #!/bin/bash
 
-
-
 # Exit immediately if a command fails
 set -e
-
-
 
 # STEP1: build JSVC typescript src
     echo "🔨 Building TypeScript project..."

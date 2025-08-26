@@ -11,15 +11,15 @@ import fs from 'fs';
 import path from 'path';
 
 import LogHandler from "../lib/LogHandler";
-import virtualEnv from "../lib/virtualEnv";
 import executeCommand from "../lib/cmdExecuter";
 import getDirTree from '../lib/directoryTree';
 import { fileSave } from './fileManager';
+import { execute } from '../lib/kernel/manager';
 
 /**
  * Controller for execute code
  */
-export function executeController( req: any, res: any, next: any ) {
+export async function executeController( req: any, res: any, next: any ) {
     try {
 
         // Get the codeBlock from request body
@@ -31,7 +31,8 @@ export function executeController( req: any, res: any, next: any ) {
         }
 
         // Execute the code and get the result
-        const result = virtualEnv.run({ code: codeBlock });
+        // const result = virtualEnv.run({ code: codeBlock });
+        const result = await execute(codeBlock);
 
         // Send the response
         res.status(200).json( result );
