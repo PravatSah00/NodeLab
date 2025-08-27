@@ -1,0 +1,10 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "log": {
+    "logFolder": "logs",
+    "logPrefix": "log",
+    "maxBackups": 30
+  }
+}

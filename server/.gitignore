@@ -1,7 +1,14 @@
 # Ignore the build output directory
 /bin/
-*/bin/
+/bin/*
+
+# Ignore the temp output directory
+/tmp/
+/temp/*
 
 #ignore log directory
 /logs/
 */logs/
+
+#ignore config
+/config/*.json

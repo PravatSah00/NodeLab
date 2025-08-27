@@ -10,7 +10,7 @@ run:
 	go run $(PKG)
 
 dev:
-	go run $(PKG)
+	air
 
 test:
 	go test ./...
