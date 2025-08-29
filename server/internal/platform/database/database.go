@@ -37,11 +37,6 @@ func New(lc fx.Lifecycle, config *config.Config) (*Database, error) {
 		return nil, fmt.Errorf("database connection failed: %w", err)
 	}
 
-	// Run auto migration
-	// if err := database.client.Schema.Create(context.Background()); err != nil {
-	// 	return nil, fmt.Errorf("failed creating schema resources: %w", err)
-	// }
-
 	// Register FX lifecycle hooks
 	lc.Append(fx.Hook{
 		OnStop: func(ctx context.Context) error {
