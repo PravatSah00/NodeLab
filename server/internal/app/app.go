@@ -1,9 +1,8 @@
 package app
 
 import (
-	"fmt"
 	"nodelab/internal/platform"
-	"nodelab/internal/platform/config"
+	"nodelab/internal/platform/database"
 	"nodelab/internal/platform/logger"
 
 	"go.uber.org/fx"
@@ -19,9 +18,10 @@ func New() *App {
 	// Create fx app
 	app := fx.New(
 		platform.Module,
-		fx.Invoke(func(cfg *config.Config, lg *logger.Logger) {
-			fmt.Println("Server port:", cfg.GetInt("server.port"))
-			lg.Success("error is here", map[string]any{"user": "alice", "id": 123})
+		fx.Invoke(func(db *database.Database, logger *logger.Logger) {
+			// logger.Info("Database testing")
+			// error := db.Ping(context.Background())
+			// logger.Error(error)
 		}),
 	)
 
