@@ -1,4 +1,4 @@
-.PHONY: build run dev test fmt tidy clean docker
+.PHONY: build run dev test fmt tidy clean docker generage
 
 BINARY := bin/server
 PKG := ./cmd/server
@@ -11,6 +11,9 @@ run:
 
 dev:
 	air
+
+generate:
+	go generate ./ent
 
 test:
 	go test ./...

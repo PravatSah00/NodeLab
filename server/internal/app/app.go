@@ -1,6 +1,7 @@
 package app
 
 import (
+	"context"
 	"nodelab/internal/platform"
 	"nodelab/internal/platform/database"
 	"nodelab/internal/platform/logger"
@@ -19,9 +20,10 @@ func New() *App {
 	app := fx.New(
 		platform.Module,
 		fx.Invoke(func(db *database.Database, logger *logger.Logger) {
+
 			// logger.Info("Database testing")
-			// error := db.Ping(context.Background())
-			// logger.Error(error)
+			error := db.Ping(context.Background())
+			logger.Error(error)
 		}),
 	)
 
